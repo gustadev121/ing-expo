@@ -15,7 +15,7 @@ export const Route = createFileRoute("/presentations/$topic")({
     if (!found) {
       throw new Error("Presentation not found");
     }
-    return found;
+    return { title: found.title, description: found.description };
   },
   errorComponent: ({ error }) => {
     return <div>{error.message}</div>;
@@ -23,7 +23,10 @@ export const Route = createFileRoute("/presentations/$topic")({
 });
 
 function RouteComponent() {
-  const loaded = Route.useLoaderData();
-  const Presentation = loaded.component;
+  const { topic } = Route.useParams();
+  const Presentation = presentations.find((p) => p.slug === topic)?.component;
+  if (!Presentation) {
+    return null;
+  }
   return <Presentation />;
 }
