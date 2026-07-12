@@ -1,0 +1,289 @@
+/* Grammar Presentation Theme - Light Editorial */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  --r-background-color: #f0f2f8;
+  --r-main-font: "Source Sans 3", "Segoe UI", sans-serif;
+  --r-main-color: #2d2d2d;
+  --r-heading-font: "Playfair Display", Georgia, serif;
+  --r-heading-color: #1a1a1a;
+  --r-heading1-size: 2.4em;
+  --r-heading2-size: 1.7em;
+  --r-heading3-size: 1.3em;
+  --r-heading-text-transform: none;
+  --r-link-color: #6366f1;
+  --r-link-color-hover: #4f46e5;
+  --r-selection-background-color: #c7d2fe;
+  --r-code-font: "JetBrains Mono", monospace;
+  --r-code-color: #e11d48;
+  --r-main-font-size: 28px;
+  --r-block-margin: 20px;
+}
+
+/* Typography */
+.reveal .slides h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  font-size: 2.8em;
+}
+.reveal .slides h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.reveal .slides h3 {
+  font-weight: 600;
+}
+.reveal .slides p {
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Code */
+.reveal .slides code {
+  font-family: var(--r-code-font);
+  font-size: 0.85em;
+  padding: 0.15em 0.4em;
+  background: #f1f5f9;
+  border-radius: 4px;
+  color: var(--r-code-color);
+}
+
+/* Tables */
+.reveal .slides table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.reveal .slides th {
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+  padding: 0.8em 1em;
+  text-align: left;
+}
+.reveal .slides td {
+  padding: 0.7em 1em;
+  border-bottom: 1px solid #e2e8f0;
+}
+.reveal .slides tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+/* Progress */
+.reveal .progress {
+  height: 4px;
+  color: #6366f1;
+}
+.reveal .progress span {
+  background: #6366f1;
+}
+
+/* Controls */
+.reveal .controls {
+  color: #6366f1;
+}
+.reveal .controls button {
+  color: #6366f1;
+}
+
+/* Slide number */
+.reveal .slide-number {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  color: #64748b;
+  background: transparent;
+  right: 20px;
+  bottom: 12px;
+}
+
+/* Cards */
+.grammar-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5em;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+.grammar-card-teal {
+  background: linear-gradient(135deg, #14b8a6, #06b6d4);
+  color: white;
+  border-radius: 16px;
+  padding: 1.5em;
+  box-shadow: 0 4px 16px rgba(20, 184, 166, 0.25);
+}
+
+/* Badges */
+.grammar-badge {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  font-size: 0.7em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.grammar-badge-purple {
+  background: #ede9fe;
+  color: #6366f1;
+}
+.grammar-badge-teal {
+  background: #ccfbf1;
+  color: #0d9488;
+}
+.grammar-badge-amber {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+/* Examples */
+.grammar-example {
+  background: #f8fafc;
+  border-left: 3px solid #6366f1;
+  padding: 0.75em 1em;
+  border-radius: 0 8px 8px 0;
+  margin: 0.5em 0;
+}
+
+/* Gradient text */
+.grammar-title-accent {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dividers */
+.grammar-divider-center {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #6366f1, transparent);
+  border: none;
+  margin: 1.5em auto;
+  width: 160px;
+}
+
+/* Grid layouts */
+.grammar-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  align-items: start;
+}
+.grammar-three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5em;
+  align-items: start;
+}
+
+/* Icon containers */
+.grammar-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  margin-bottom: 0.75em;
+}
+.grammar-icon-purple {
+  background: #ede9fe;
+}
+.grammar-icon-teal {
+  background: #ccfbf1;
+}
+.grammar-icon-amber {
+  background: #fef3c7;
+}
+
+/* Numbered circles */
+.grammar-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9em;
+  flex-shrink: 0;
+}
+.grammar-number-purple {
+  background: #ede9fe;
+  color: #6366f1;
+}
+.grammar-number-teal {
+  background: #ccfbf1;
+  color: #0d9488;
+}
+
+/* Image side panel */
+.grammar-image-side {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background-size: cover;
+  background-position: center;
+}
+.grammar-image-side::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #f0f2f8 0%, transparent 30%);
+}
+
+/* Transitions */
+.reveal .slides section {
+  transition: all 0.4s ease;
+}
+
+/* Content slide backgrounds - ensure full coverage */
+.reveal .slides section > div[style*="background"] {
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  margin-top: -40px;
+  margin-bottom: -40px;
+  padding: 60px 80px;
+  min-height: calc(100% + 80px);
+}
+
+/* Decorative corner accents for content slides */
+.reveal .slides section:not(.image-slide) > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle at top right,
+    rgba(99, 102, 241, 0.08),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.reveal .slides section:not(.image-slide) > div::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle at bottom left,
+    rgba(20, 184, 166, 0.06),
+    transparent 70%
+  );
+  pointer-events: none;
+}

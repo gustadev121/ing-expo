@@ -1,7 +1,7 @@
 import { Deck } from "@revealjs/react";
 import type { ComponentProps } from "react";
 import "reveal.js/reveal.css";
-import "reveal.js/theme/black.css";
+import "./grammar-theme.css";
 
 export function PresentationDeck({
   config,
@@ -20,6 +20,7 @@ export function PresentationDeck({
         controls: true,
         progress: true,
         center: false,
+        transition: "slide",
         ...config,
       }}
       {...props}
