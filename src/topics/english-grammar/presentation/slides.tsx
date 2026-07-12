@@ -897,14 +897,14 @@ export function EnglishGrammarPresentation() {
 
       {/* ═══════════════════ PRACTICE 1 ═══════════════════ */}
       <Slide background="linear-gradient(135deg, #09090b 0%, #1e1b4b 100%)">
-        <div className="flex flex-col justify-center h-full w-full px-12 py-8 text-left">
-          <p className="grammar-badge grammar-badge-purple mb-3 w-fit">
+        <div className="flex flex-col justify-center h-full w-full px-12 py-8 text-left relative z-10">
+          <p className="grammar-badge grammar-badge-purple mb-2 w-fit">
             Practice
           </p>
-          <h2 className="text-5xl! font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-4xl! font-bold text-white mb-4 tracking-tight">
             Choose the Correct Tense
           </h2>
-          <div className="space-y-4 max-w-5xl">
+          <div className="flex flex-col gap-4 max-w-5xl w-full">
             {[
               {
                 q: "I ______ (walk) my dog when I ______ (see) an old friend.",
@@ -920,15 +920,15 @@ export function EnglishGrammarPresentation() {
               },
             ].map((item, i) => (
               <Fragment key={item.q}>
-                <div className="grammar-card bg-white/3 border-white/8 hover:border-purple-500/20 transition px-6 py-4 flex flex-col justify-between">
-                  <p className="text-xl text-gray-200 font-normal">
-                    <span className="font-bold text-purple-400 mr-3">
+                <div className="grammar-card bg-white/3 border-white/8 hover:border-purple-500/20 transition px-6 py-3 flex justify-between items-center gap-4">
+                  <p className="text-lg text-gray-200 font-normal">
+                    <span className="font-bold text-purple-400 mr-2">
                       0{i + 1}.
                     </span>
                     {item.q}
                   </p>
-                  <div className="fragment fade-up mt-3">
-                    <div className="flex items-center gap-2 text-purple-300 font-mono font-bold bg-purple-500/10 border border-purple-500/20 px-3.5 py-1.5 rounded-lg w-fit text-base">
+                  <div className="fragment fade-up flex-shrink-0">
+                    <div className="flex items-center gap-2 text-purple-300 font-mono font-bold bg-purple-500/10 border border-purple-500/20 px-3.5 py-1 rounded-lg text-sm shadow-inner">
                       <Check className="w-4 h-4 text-purple-400" />
                       <span>{item.a}</span>
                     </div>
@@ -942,14 +942,14 @@ export function EnglishGrammarPresentation() {
 
       {/* ═══════════════════ PRACTICE 2 ═══════════════════ */}
       <Slide background="linear-gradient(135deg, #09090b 0%, #022c22 100%)">
-        <div className="flex flex-col justify-center h-full w-full px-12 py-8 text-left">
-          <p className="grammar-badge grammar-badge-teal mb-3 w-fit">
+        <div className="flex flex-col justify-center h-full w-full px-12 py-8 text-left relative z-10">
+          <p className="grammar-badge grammar-badge-teal mb-2 w-fit">
             Practice
           </p>
-          <h2 className="text-5xl! font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-4xl! font-bold text-white mb-4 tracking-tight">
             More Practice
           </h2>
-          <div className="space-y-4 max-w-5xl">
+          <div className="flex flex-col gap-4 max-w-5xl w-full">
             {[
               {
                 q: "They ______ (not/eat) anything because they ______ (not/be) hungry.",
@@ -965,15 +965,15 @@ export function EnglishGrammarPresentation() {
               },
             ].map((item, i) => (
               <Fragment key={item.q}>
-                <div className="grammar-card bg-white/3 border-white/8 hover:border-teal-500/20 transition px-6 py-4 flex flex-col justify-between">
-                  <p className="text-xl text-gray-200 font-normal">
-                    <span className="font-bold text-teal-400 mr-3">
+                <div className="grammar-card bg-white/3 border-white/8 hover:border-teal-500/20 transition px-6 py-3 flex justify-between items-center gap-4">
+                  <p className="text-lg text-gray-200 font-normal">
+                    <span className="font-bold text-teal-400 mr-2">
                       0{i + 4}.
                     </span>
                     {item.q}
                   </p>
-                  <div className="fragment fade-up mt-3">
-                    <div className="flex items-center gap-2 text-teal-300 font-mono font-bold bg-teal-500/10 border border-teal-500/20 px-3.5 py-1.5 rounded-lg w-fit text-base">
+                  <div className="fragment fade-up flex-shrink-0">
+                    <div className="flex items-center gap-2 text-teal-300 font-mono font-bold bg-teal-500/10 border border-teal-500/20 px-3.5 py-1 rounded-lg text-sm shadow-inner">
                       <Check className="w-4 h-4 text-teal-400" />
                       <span>{item.a}</span>
                     </div>
