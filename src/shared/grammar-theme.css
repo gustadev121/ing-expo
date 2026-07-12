@@ -1,23 +1,71 @@
-/* Grammar Presentation Theme - Light Editorial */
+/* Grammar Presentation Theme - Dark Editorial */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap");
 
 :root {
-  --r-background-color: #f0f2f8;
+  --r-background-color: #0b0f19;
   --r-main-font: "Source Sans 3", "Segoe UI", sans-serif;
-  --r-main-color: #2d2d2d;
+  --r-main-color: #e2e8f0;
   --r-heading-font: "Playfair Display", Georgia, serif;
-  --r-heading-color: #1a1a1a;
-  --r-heading1-size: 2.4em;
-  --r-heading2-size: 1.7em;
+  --r-heading-color: #ffffff;
+  --r-heading1-size: 2.6em;
+  --r-heading2-size: 1.8em;
   --r-heading3-size: 1.3em;
   --r-heading-text-transform: none;
-  --r-link-color: #6366f1;
-  --r-link-color-hover: #4f46e5;
-  --r-selection-background-color: #c7d2fe;
+  --r-link-color: #a78bfa;
+  --r-link-color-hover: #c084fc;
+  --r-selection-background-color: #4c1d95;
   --r-code-font: "JetBrains Mono", monospace;
-  --r-code-color: #e11d48;
-  --r-main-font-size: 28px;
+  --r-code-color: #f43f5e;
+  --r-main-font-size: 26px;
   --r-block-margin: 20px;
+}
+
+/* Base slide corrections to fill the screen */
+.reveal .slides section {
+  padding: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Subtle corner decorations for slides */
+.reveal .slides section::before {
+  content: "";
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(40px);
+}
+
+.reveal .slides section::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(20, 184, 166, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(50px);
 }
 
 /* Typography */
@@ -36,88 +84,121 @@
   font-weight: 600;
 }
 .reveal .slides p {
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
 }
 
-/* Code */
+/* Code styling */
 .reveal .slides code {
   font-family: var(--r-code-font);
   font-size: 0.85em;
-  padding: 0.15em 0.4em;
-  background: #f1f5f9;
-  border-radius: 4px;
-  color: var(--r-code-color);
+  padding: 0.15em 0.45em;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #f43f5e;
 }
 
-/* Tables */
+/* Tables in Dark Mode */
 .reveal .slides table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .reveal .slides th {
-  background: #6366f1;
+  background: rgba(99, 102, 241, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: white;
   font-weight: 600;
   padding: 0.8em 1em;
   text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 .reveal .slides td {
   padding: 0.7em 1em;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  color: #e2e8f0;
+}
+.reveal .slides tr:last-child td {
+  border-bottom: none;
 }
 .reveal .slides tr:nth-child(even) td {
-  background: #f8fafc;
+  background: rgba(255, 255, 255, 0.04);
 }
 
-/* Progress */
+/* Progress bar color */
 .reveal .progress {
   height: 4px;
-  color: #6366f1;
 }
 .reveal .progress span {
-  background: #6366f1;
+  background: #a78bfa;
 }
 
 /* Controls */
 .reveal .controls {
-  color: #6366f1;
+  color: #a78bfa;
 }
 .reveal .controls button {
-  color: #6366f1;
+  color: #a78bfa;
 }
 
 /* Slide number */
 .reveal .slide-number {
   font-family: "Source Sans 3", sans-serif;
-  font-size: 16px;
-  color: #64748b;
+  font-size: 14px;
+  color: #94a3b8;
   background: transparent;
-  right: 20px;
-  bottom: 12px;
+  right: 24px;
+  bottom: 16px;
 }
 
-/* Cards */
+/* Glassmorphism Cards */
 .grammar-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 16px;
   padding: 1.5em;
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.06),
-    0 4px 12px rgba(0, 0, 0, 0.04);
-  border: 1px solid #e2e8f0;
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+.grammar-card:hover {
+  border-color: rgba(167, 139, 250, 0.25);
+  transform: translateY(-2px);
 }
 
 .grammar-card-teal {
-  background: linear-gradient(135deg, #14b8a6, #06b6d4);
-  color: white;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 184, 166, 0.15),
+    rgba(13, 148, 136, 0.05)
+  );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 16px;
   padding: 1.5em;
-  box-shadow: 0 4px 16px rgba(20, 184, 166, 0.25);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+.grammar-card-teal:hover {
+  border-color: rgba(20, 184, 166, 0.4);
+  transform: translateY(-2px);
 }
 
 /* Badges */
@@ -125,48 +206,33 @@
   display: inline-block;
   padding: 0.3em 0.8em;
   border-radius: 20px;
-  font-size: 0.7em;
-  font-weight: 600;
+  font-size: 0.65em;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
+  border: 1px solid currentColor;
 }
 .grammar-badge-purple {
-  background: #ede9fe;
-  color: #6366f1;
+  background: rgba(167, 139, 250, 0.12);
+  color: #c084fc;
 }
 .grammar-badge-teal {
-  background: #ccfbf1;
-  color: #0d9488;
+  background: rgba(20, 184, 166, 0.12);
+  color: #2dd4bf;
 }
 .grammar-badge-amber {
-  background: #fef3c7;
-  color: #d97706;
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
 }
 
-/* Examples */
+/* Examples list */
 .grammar-example {
-  background: #f8fafc;
-  border-left: 3px solid #6366f1;
-  padding: 0.75em 1em;
-  border-radius: 0 8px 8px 0;
-  margin: 0.5em 0;
-}
-
-/* Gradient text */
-.grammar-title-accent {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Dividers */
-.grammar-divider-center {
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #6366f1, transparent);
-  border: none;
-  margin: 1.5em auto;
-  width: 160px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.85em 1.2em;
+  border-radius: 0 10px 10px 0;
+  margin: 0.6em 0;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-left: 4px solid #a78bfa;
 }
 
 /* Grid layouts */
@@ -195,13 +261,19 @@
   margin-bottom: 0.75em;
 }
 .grammar-icon-purple {
-  background: #ede9fe;
+  background: rgba(167, 139, 250, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(167, 139, 250, 0.25);
 }
 .grammar-icon-teal {
-  background: #ccfbf1;
+  background: rgba(20, 184, 166, 0.15);
+  color: #2dd4bf;
+  border: 1px solid rgba(20, 184, 166, 0.25);
 }
 .grammar-icon-amber {
-  background: #fef3c7;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.25);
 }
 
 /* Numbered circles */
@@ -217,73 +289,12 @@
   flex-shrink: 0;
 }
 .grammar-number-purple {
-  background: #ede9fe;
-  color: #6366f1;
+  background: rgba(167, 139, 250, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(167, 139, 250, 0.25);
 }
 .grammar-number-teal {
-  background: #ccfbf1;
-  color: #0d9488;
-}
-
-/* Image side panel */
-.grammar-image-side {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 40%;
-  background-size: cover;
-  background-position: center;
-}
-.grammar-image-side::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #f0f2f8 0%, transparent 30%);
-}
-
-/* Transitions */
-.reveal .slides section {
-  transition: all 0.4s ease;
-}
-
-/* Content slide backgrounds - ensure full coverage */
-.reveal .slides section > div[style*="background"] {
-  width: calc(100% + 80px);
-  margin-left: -40px;
-  margin-top: -40px;
-  margin-bottom: -40px;
-  padding: 60px 80px;
-  min-height: calc(100% + 80px);
-}
-
-/* Decorative corner accents for content slides */
-.reveal .slides section:not(.image-slide) > div::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(
-    circle at top right,
-    rgba(99, 102, 241, 0.08),
-    transparent 70%
-  );
-  pointer-events: none;
-}
-
-.reveal .slides section:not(.image-slide) > div::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(
-    circle at bottom left,
-    rgba(20, 184, 166, 0.06),
-    transparent 70%
-  );
-  pointer-events: none;
+  background: rgba(20, 184, 166, 0.15);
+  color: #2dd4bf;
+  border: 1px solid rgba(20, 184, 166, 0.25);
 }
