@@ -1528,7 +1528,7 @@ export function EnglishGrammarPresentation() {
                   border: `1px solid ${P.gray.border}`,
                 }}
               >
-                Sistemas Distribuidos
+                Ingles
               </span>
               <span
                 className="rounded-full px-3 py-1 text-xs uppercase tracking-widest text-gray-400"
