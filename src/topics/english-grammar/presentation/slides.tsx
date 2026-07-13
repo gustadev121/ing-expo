@@ -268,7 +268,7 @@ export function EnglishGrammarPresentation() {
               <img
                 src="/english-grammar/was-were.png"
                 alt="Was and Were"
-                className="h-4/5 w-full rounded-2xl object-cover shadow-sm"
+                className="w-md rounded-2xl object-cover shadow-sm"
                 style={{ border: `1px solid ${P.gray.border}` }}
               />
             </div>
@@ -671,7 +671,7 @@ export function EnglishGrammarPresentation() {
               <img
                 src="/english-grammar/continuous.png"
                 alt="Past Continuous"
-                className="h-4/5 w-full rounded-2xl object-cover shadow-sm"
+                className="w-md rounded-2xl object-cover shadow-sm"
                 style={{ border: `1px solid ${P.gray.border}` }}
               />
             </div>
