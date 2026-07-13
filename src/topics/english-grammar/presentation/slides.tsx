@@ -418,7 +418,7 @@ export function EnglishGrammarPresentation() {
                   <VolumeX className="h-6 w-6" /> Negative
                 </h3>
                 <div
-                  className="mb-6 rounded-xl p-4 text-center"
+                  className="mb-6 rounded-xl py-4 text-center"
                   style={{
                     backgroundColor: P.purple.base,
                     border: `1px solid ${P.purple.border}`,
@@ -1390,7 +1390,7 @@ export function EnglishGrammarPresentation() {
       {/* ═══════════════════ SUMMARY — crosshatch ═══════════════════ */}
       <Slide background={P.white}>
         <div className="relative size-full">
-          <div className="geo-crosshatch" />
+          <div className="geo-lines-v" />
           <div className="relative z-10 flex h-full flex-col justify-center px-12 py-10 text-left">
             <p className="grammar-badge grammar-badge-purple mb-3 w-fit">
               Summary
@@ -1506,10 +1506,6 @@ export function EnglishGrammarPresentation() {
         <div className="relative size-full">
           <div
             className="geo-dot-grid"
-            style={{
-              opacity: 0.1,
-              backgroundImage: `radial-gradient(circle, ${P.purple.text} 1.2px, transparent 1.2px)`,
-            }}
           />
           <div className="relative z-10 flex h-full max-w-5xl flex-col items-center justify-center px-8 py-12 text-center mx-auto">
             <h1 className="mb-4 text-7xl! font-normal tracking-tight text-gray-900">
