@@ -1,5 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { presentations } from "@/lib/presentations";
+import { palette } from "@/shared/palette";
+
+const P = palette;
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -7,9 +10,19 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="flex min-h-screen flex-col items-center bg-linear-to-br from-slate-900 via-indigo-950 to-slate-900 px-4 py-12 font-sans text-slate-200">
+    <div
+      className="flex min-h-screen flex-col items-center px-4 py-12 font-sans"
+      style={{
+        background: `linear-gradient(135deg, ${P.gray.text} 0%, #312e81 50%, ${P.gray.text} 100%)`,
+      }}
+    >
       <header className="mb-12 text-center">
-        <h1 className="mb-2 bg-linear-to-r from-indigo-400 to-purple-400 bg-clip-text text-5xl font-extrabold text-transparent">
+        <h1
+          className="mb-2 bg-clip-text text-5xl font-extrabold text-transparent"
+          style={{
+            backgroundImage: `linear-gradient(90deg, ${P.purple.base}, ${P.teal.base})`,
+          }}
+        >
           Sistemas Distribuidos · Grupo C
         </h1>
       </header>

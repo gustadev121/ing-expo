@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
+import { palette } from "./palette";
 
 export function SlideWrap({
-  color,
+  color = palette.purple.text,
   tag,
   className,
   variant = "default",
@@ -16,34 +17,32 @@ export function SlideWrap({
   const isDecorated = variant === "decorated";
 
   return (
-    <div
-      className={`size-full text-white flex flex-col justify-between items-center relative overflow-hidden py-4 gap-4`}
-    >
+    <div className="size-full text-gray-900 flex flex-col justify-between items-center relative overflow-hidden py-4 gap-4">
       <div
-        className="pointer-events-none h-0.75 w-full relative z-10"
+        className="pointer-events-none h-px w-full relative z-10"
         style={{
           background: `linear-gradient(90deg, ${color}, transparent)`,
           ...(isDecorated
-            ? { boxShadow: `0 0 10px ${color}40, 0 0 20px ${color}20` }
+            ? { boxShadow: `0 0 8px ${color}30, 0 0 16px ${color}15` }
             : {}),
         }}
       />
       {isDecorated && (
         <>
           <div
-            className="absolute top-5 left-5 w-2 h-2 rounded-full opacity-20"
+            className="absolute top-5 left-5 w-1.5 h-1.5 rounded-full opacity-15"
             style={{ backgroundColor: color }}
           />
           <div
-            className="absolute top-5 right-5 w-2 h-2 rounded-full opacity-20"
+            className="absolute top-5 right-5 w-1.5 h-1.5 rounded-full opacity-15"
             style={{ backgroundColor: color }}
           />
           <div
-            className="absolute bottom-20 left-5 w-2 h-2 rounded-full opacity-20"
+            className="absolute bottom-20 left-5 w-1.5 h-1.5 rounded-full opacity-15"
             style={{ backgroundColor: color }}
           />
           <div
-            className="absolute bottom-20 right-5 w-2 h-2 rounded-full opacity-20"
+            className="absolute bottom-20 right-5 w-1.5 h-1.5 rounded-full opacity-15"
             style={{ backgroundColor: color }}
           />
         </>
@@ -59,11 +58,11 @@ export function SlideWrap({
         <div className={`flex-1 ${className} relative z-10`}>{children}</div>
       </div>
       <div
-        className="pointer-events-none h-0.75 w-full relative z-10"
+        className="pointer-events-none h-px w-full relative z-10"
         style={{
           background: `linear-gradient(90deg, ${color}, transparent)`,
           ...(isDecorated
-            ? { boxShadow: `0 0 10px ${color}40, 0 0 20px ${color}20` }
+            ? { boxShadow: `0 0 8px ${color}30, 0 0 16px ${color}15` }
             : {}),
         }}
       />

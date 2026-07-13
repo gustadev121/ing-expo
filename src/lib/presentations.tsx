@@ -13,9 +13,9 @@ export const presentations = [
   {
     slug: "english-grammar",
     path: "/presentations/english-grammar",
-    title: "Past Simple & Past Continuous",
+    title: "Past Simple (Was/Were) & Past Continuous",
     description:
-      "Understanding the difference between Past Simple and Past Continuous tenses in English",
+      "Mastering was and were in Past Simple, and was/were + V-ing in Past Continuous",
     component: EnglishGrammarPresentation,
   },
 ];

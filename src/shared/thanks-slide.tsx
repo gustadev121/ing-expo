@@ -1,11 +1,12 @@
 import { Slide } from "@revealjs/react";
+import { palette } from "./palette";
 import { SlideWrap } from "./slide-wrap";
 
 export function ThanksSlide({
-  color,
+  color = palette.purple.text,
   variant = "default",
 }: {
-  color: string;
+  color?: string;
   variant?: "default" | "decorated";
 }) {
   return (
@@ -17,14 +18,14 @@ export function ThanksSlide({
         className="justify-center items-center flex flex-col"
       >
         <h1
-          className="text-8xl! font-light tracking-tight relative z-10"
+          className="text-8xl! font-light tracking-tight relative z-10 text-gray-900"
           style={
             variant === "decorated"
-              ? { textShadow: `0 0 30px ${color}40, 0 0 60px ${color}20` }
+              ? { textShadow: `0 0 30px ${color}20, 0 0 60px ${color}10` }
               : {}
           }
         >
-          ¡<span style={{ color }}>Gracias</span>!
+          <span style={{ color }}>Thank</span> You!
         </h1>
       </SlideWrap>
     </Slide>
